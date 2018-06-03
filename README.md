@@ -18,7 +18,7 @@ Tutorial (ES):
 
 3- Espera 2-5 minutos y haz click para comprobar otra vez los nameservers
 
-4. Cuando CloudFlare diga que todo está correcto, crea un subdominio. Ves a la parte de DNS, en tipo elige "A", en nombre elige el nombre para el subdominio, ej. "Servidor" o lo que quieras, en IPv4 pon tu IP publica actual, solo por la primera vez, después el script lo cambiará automáticamente! Deja TTL Automatico y haz click en la nuve, de forma que se quede en gris. Después haz click en "Add Record"
+4- Cuando CloudFlare diga que todo está correcto, crea un subdominio. Ves a la parte de DNS, en tipo elige "A", en nombre elige el nombre para el subdominio, ej. "Servidor" o lo que quieras, en IPv4 pon tu IP publica actual, solo por la primera vez, después el script lo cambiará automáticamente! Deja TTL Automatico y haz click en la nuve, de forma que se quede en gris. Después haz click en "Add Record"
 
 5- Ahora que tenemos el subdominio creado, podemos editar "cloudflare.py" y cambia todas las IDS e información que se pide:
   - CLOUDFLARE_API
@@ -52,7 +52,7 @@ Tutorial (EN):
 
 3- Wait 2-5 minutes and click on check nameservers in your cloudflare account.
 
-4. When CloudFlare says it's all correct, create a subdomain. Go to DNS side, in DNS type, choose "A", in Name put your subdomain name, like "servidor" or whatever you want, in IPv4 put your actual public IP, only for the first time, because the script will change it automatically later! Leave automatic TTL, and click on the cloud, so it will turn gray. Then click to "Add Record".
+4- When CloudFlare says it's all correct, create a subdomain. Go to DNS side, in DNS type, choose "A", in Name put your subdomain name, like "servidor" or whatever you want, in IPv4 put your actual public IP, only for the first time, because the script will change it automatically later! Leave automatic TTL, and click on the cloud, so it will turn gray. Then click to "Add Record".
 
 5- Now that we have our subdomain created, we can edit "cloudflare.py" and change all the keys and information that it ask you:
   - CLOUDFLARE_API
