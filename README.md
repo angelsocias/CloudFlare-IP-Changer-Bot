@@ -1,7 +1,7 @@
 # CloudFlare-IP-Changer-Bot
 <b>Español</b>
 
-Con este script de Python puedes cambiar automaticamente la IP de un subdominio, como DynDNS pero totalmente gratis, usando solamente el crontab.
+Con este script de Python puedes cambiar automaticamente la IP de un subdominio, como DynDNS o NoIp pero totalmente gratis, usando solamente el crontab.
 
 ¿Qué necesitas para usarlo?:
 
