@@ -11,10 +11,15 @@ Con este script de Python puedes cambiar automaticamente la IP de un subdominio,
 
 
 Tutorial (ES):
+
 1- Crea el dominio en freenom, entra a la web y elige uno, te pedirá crearte una cuenta. (Elige la opción de email, cuentas de google no funcionan correctamente)
+
 2- Crea la cuenta en cloudflare, te pedirá el dominio, pon el que has creado anteriormente. CloudFlare comprobará tus DNS, puedes saltarte este paso. En este momento, CloudFlare te dará dos NameServers, copialos y los cambias en tu zona DNS de FreeNom.
+
 3- Espera 2-5 minutos y haz click para comprobar otra vez los nameservers
+
 4. Cuando CloudFlare diga que todo está correcto, crea un subdominio. Ves a la parte de DNS, en tipo elige "A", en nombre elige el nombre para el subdominio, ej. "Servidor" o lo que quieras, en IPv4 pon tu IP publica actual, solo por la primera vez, después el script lo cambiará automáticamente! Deja TTL Automatico y haz click en la nuve, de forma que se quede en gris. Después haz click en "Add Record"
+
 5- Ahora que tenemos el subdominio creado, podemos editar "cloudflare.py" y cambia todas las IDS e información que se pide:
   - CLOUDFLARE_API
   - CLOUDFLARE_ZONE
@@ -22,7 +27,9 @@ Tutorial (ES):
   - SUBDOMAIN_TO_EDIT
   
 6- Cuando hayas cambiado todo, comprueba que funciona correctamente usandolo manualmente `python cloudflare.py`. The script deberá devolverte "Same IP".
+
 7- Abre el crontab `sudo crontab -e` y agrega el script para que corra (por ejemplo) 10 minutos `*/1 * * * * python /dir/to/script/cloudflare.py`
+
 8- Todo listo, sientete libre de preguntar o hacer cambios en el script!
 
 
