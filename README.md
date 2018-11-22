@@ -38,23 +38,23 @@ Tutorial (ES):
 
 With this Python script you can change automatically your subdomain IP, like DynDNS but totally free, using crontab.
 
-What you need to use it:
+What you need to use is:
 1- A domain, you can use http://www.freenom.com to get a free domain, it works correctly.
-2- CloudFlare account, totally free too.
-3- The server where the script will run, you must have access to the crontab
+2- CloudFlare account, totally free.
+3- The server where the script will run, you must have access to the crontab.
 
 
 Tutorial (EN):
 
-1- Create your free domain in freenom, enter to the site and choose your domain, then it will ask you to create an account. (Choose email, google account doesn't work correctly.
+1- Create your free domain in freenom, enter to the site and choose your domain, then it will ask you to create an account. (Choose email, google account doesn't work correctly sometimes).
 
-2- Create CloudFlare account, it will ask you for the domain, put your new free domain and it will check all your dns, you can skin this step. Now CloudFlare will give you two NameServers, copy it and change the nameservers in your freenom domain.
+2- Create CloudFlare account, it will ask you for the domain, put your new free domain and it will check all your dns, you can skip this step. Now CloudFlare will give you two NameServers, copy them and change the nameservers in your freenom domain.
 
 3- Wait 2-5 minutes and click on check nameservers in your cloudflare account.
 
-4- When CloudFlare says it's all correct, create a subdomain. Go to DNS side, in DNS type, choose "A", in Name put your subdomain name, like "servidor" or whatever you want, in IPv4 put your actual public IP, only for the first time, because the script will change it automatically later! Leave automatic TTL, and click on the cloud, so it will turn gray. Then click to "Add Record".
+4- When CloudFlare says it's all correct, create a subdomain. Go to DNS side, in DNS type, choose "A", in Name put your subdomain name, like "server" or whatever you want, in IPv4 put your actual public IP, only for the first time, because the script will change it automatically later! Leave automatic TTL, and click on the cloud, so it will turn gray. Then click to "Add Record".
 
-5- Now that we have our subdomain created, we can edit "cloudflare.py" and change all the keys and information that it ask you:
+5- Now that we have our subdomain created, we can edit "cloudflare.py" and change all the keys and information that it asks you:
   - CLOUDFLARE_API
   - CLOUDFLARE_ZONE
   - CLIENT_MAIL
@@ -62,6 +62,6 @@ Tutorial (EN):
   
 6- When you change all, just make sure it works correctly running it manually `python cloudflare.py`. The script must return "Same IP".
 
-7- Open the crontab `sudo crontab -e` and add the script so it will run every (per example) 10 minutes `*/1 * * * * python /dir/to/script/cloudflare.py`
+7- Open the crontab `sudo crontab -e` and add the script so it will run every (per example) 10 minutes `*/10 * * * * python /dir/to/script/cloudflare.py`
 
 8- All done, just feel free to ask questions or made changes!
