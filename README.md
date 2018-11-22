@@ -28,7 +28,7 @@ Tutorial (ES):
   
 6- Cuando hayas cambiado todo, comprueba que funciona correctamente usandolo manualmente `python cloudflare.py`. The script deberá devolverte "Same IP".
 
-7- Abre el crontab `sudo crontab -e` y agrega el script para que corra (por ejemplo) 10 minutos `*/1 * * * * python /dir/to/script/cloudflare.py`
+7- Abre el crontab `sudo crontab -e` y agrega el script para que corra (por ejemplo) 10 minutos `*/10 * * * * python /dir/to/script/cloudflare.py`
 
 8- Todo listo, sientete libre de preguntar o hacer cambios en el script!
 
